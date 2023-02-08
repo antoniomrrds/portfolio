@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div
       className="h-screen flex flex-col justify-evenly items-center max-mobileUL:px-4 relative text-center mt-32 md:text-left md:flex-row max-w-7xl
-       mx-auto min-sm:px-10"
+       mx-auto min-sm:px-10   "
     >
       <h3
         className="absolute text-center
@@ -35,27 +35,29 @@ const About = () => {
           rounded-full  object-cover md:rounded-lg
           max-mobileL:w-40 max-mobileL:h-40
           mobileL:max-md:w-56 mobileL:max-md:h-56
-          max-w-full
+          xl:w-[500px] xl:h-[400px]
           flex-shrink-0
+          max-2xl:mt-32
           "
           src="https://res.cloudinary.com/djwcdg96o/image/upload/v1672886110/Nikola_Tesla_scientists_stage_1115_wallhere_com_0d2c1e13d3.jpg"
           alt="Antonio marcos"
         />
       </picture>
       <div
-        className="px-0 md:px-4 border-[red] border max-w-lg max-md:absolute max-md:top-1/2 max-mobileL:mt-12
-          max-md:mt-24 mx-5"
+        className="space-y-5 flex-wrap
+
+        px-0 md:px-4  max-w-lg max-md:absolute max-md:top-1/2 max-mobileL:mt-12
+        max-md:mt-24 mx-5 max-2xl:mt-40"
       >
-        <h4 className="text-2xl font-semibold">
+        <h4 className="text-4xl font-semibold">
           Here is a{' '}
           <span className="underline decoration-[#F7AB0A]/50">little</span>{' '}
           background
         </h4>
-        {/* max-[274px]:h-72 */}
         <p
-          className="text-sm  p-5  max-mobileM:overflow-y-scroll
-         max-mobileL:h-60
-           mb-5 "
+          className="max-md:text-sm   text-base p-5 max-mobileM:overflow-y-scroll
+          max-mobileL:h-60
+          mb-5 "
         >
           I'm Sonny. 💯 You might also know me as PAPA React! I'll be your coach
           & mentor inside the PAPAFAM, here's a little bit about me... I've been
