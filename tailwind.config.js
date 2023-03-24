@@ -15,6 +15,9 @@ module.exports = {
       mobileUL: '568px',
       ...defaultTheme.screens,
     },
+    fontFamily: {
+      montserrat:['Montserrat, sans-serif']
+    },
     extend: {},
   },
   plugins: [require('tailwind-scrollbar')],

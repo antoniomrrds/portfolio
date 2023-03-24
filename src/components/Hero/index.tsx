@@ -1,11 +1,21 @@
+import { urlFor } from '@/config/sanity';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
+import { PageInfo } from 'typings';
 import BackgroundCicles from '../BackgroundCicles';
 import ButtonNav from '../ButtonNav';
 
-const Hero = () => {
+type Props = {
+  pageInfo: PageInfo;
+};
+
+const Hero = ({ pageInfo }: Props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [text, count] = useTypewriter({
-    words: ["Hi, The Name's Antônio", 'Guy i need job', 'I love coding'],
+    words: [
+      `Hi, The Name's ${pageInfo?.name}`,
+      'Guy-who-loves-Coffee.tsx',
+      '<I love coding/>',
+    ],
     loop: true,
     delaySpeed: 2000,
   });
@@ -15,17 +25,17 @@ const Hero = () => {
       <picture>
         <img
           className="relative rounded-full h-32 w-32 mx-auto object-cover"
-          src="https://res.cloudinary.com/djwcdg96o/image/upload/v1672886110/Nikola_Tesla_scientists_stage_1115_wallhere_com_0d2c1e13d3.jpg"
-          alt="Antonio marcos"
+          src={urlFor(pageInfo?.heroImage).url()}
+          alt={pageInfo?.name}
         />
       </picture>
       <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px] ">
-          Software Developer
+        <h2 className="text-sm uppercase pb-2 tracking-[15px] text-[#ff0000] font ">
+         {pageInfo?.role}
         </h2>
-        <h1 className="text-4xl lg:text-5xl font-semibold px-10">
-          <span className="mr-3">{text}</span>
-          <Cursor cursorColor="#F7AB0A" />
+        <h1 className="text-4xl lg:text-5xl font-semibold px-10 ">
+          <span className="mr-3 font-montserrat leading-[75px]">{text}</span>
+          <Cursor cursorColor="#ff0000" />
         </h1>
         <div className="pt-5">
           <ButtonNav name="About" destiny="#about" classNameText="heroButton" />

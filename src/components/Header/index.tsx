@@ -1,10 +1,15 @@
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { Social } from '../../../typings.d';
 
-const Header = () => {
+type Props = {
+  socials: Social[];
+};
+
+const Header = ({ socials }: Props) => {
   return (
-    <header className="sticky top-0 p-5 flex items-start  justify-between max-w-7xl mx-auto z-20 xl:items-center ">
+    <header className="bg-[rgb(36,36,36)]  sticky top-0 p-5 flex items-start  justify-between max-w-7xl mx-auto z-20 xl:items-center ">
       <motion.div
         initial={{
           x: -500,
@@ -21,21 +26,15 @@ const Header = () => {
         }}
         className="flex flex-row item-center "
       >
-        <SocialIcon
-          url="https://twitter.com/jaketrent"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://twitter.com/jaketrent"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://twitter.com/jaketrent"
-          fgColor="gray"
-          bgColor="transparent"
-        />
+        {socials.map((social) => (
+          <SocialIcon
+            key={social._id}
+            url={social.url}
+            target="_blank"
+            fgColor="gray"
+            bgColor="transparent"
+          />
+        ))}
       </motion.div>
 
       <Link href="#contact" passHref legacyBehavior>
