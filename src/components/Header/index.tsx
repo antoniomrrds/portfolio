@@ -9,7 +9,7 @@ type Props = {
 
 const Header = ({ socials }: Props) => {
   return (
-    <header className="bg-[rgb(36,36,36)]  sticky top-0 p-5 flex items-start  justify-between max-w-7xl mx-auto z-20 xl:items-center ">
+    <header className="bg-[rgb(36,36,36)]  box-border  sticky top-0 p-2 flex items-start  justify-between max-w-7xl mx-auto z-20 xl:items-center ">
       <motion.div
         initial={{
           x: -500,

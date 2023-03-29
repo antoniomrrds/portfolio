@@ -1,7 +1,12 @@
+import { urlFor } from '@/config/sanity';
 import { motion } from 'framer-motion';
+import { Project } from 'typings';
 
-const Projects = () => {
-  const projects = [1, 2, 3, 4, 5];
+type props = {
+  projects: Project[];
+};
+
+const Projects = ({ projects }: props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -27,9 +32,9 @@ const Projects = () => {
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="w-56 h-56"
-                src="https://res.cloudinary.com/djwcdg96o/image/upload/v1672886110/Nikola_Tesla_scientists_stage_1115_wallhere_com_0d2c1e13d3.jpg"
-                alt=""
+                className="w-56 h-56 "
+                src={urlFor(project?.image).url()}
+                alt={project?.title}
               />
             </picture>
 
@@ -38,7 +43,7 @@ const Projects = () => {
                 <span className="underline decoration-[#F7AB0A]/50">
                   Case Study {i + 1} of {projects.length}
                 </span>{' '}
-                UPS clone
+                {project?.title}
               </h4>
               <p className="text-lg text-center md:text-left">
                 Netflix 2.0 app that has a Log In and Log Out Authentication

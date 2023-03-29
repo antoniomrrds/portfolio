@@ -13,14 +13,14 @@ const Hero = ({ pageInfo }: Props) => {
   const [text, count] = useTypewriter({
     words: [
       `Hi, The Name's ${pageInfo?.name}`,
-      'Guy-who-loves-Coffee.tsx',
+      'Coffee.tsx',
       '<I love coding/>',
     ],
     loop: true,
     delaySpeed: 2000,
   });
   return (
-    <div className="h-screen flex flex-col  space-y-8 items-center justify-center text-center overflow-hidden">
+    <div className="sectionMain flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCicles />
       <picture>
         <img
@@ -30,12 +30,12 @@ const Hero = ({ pageInfo }: Props) => {
         />
       </picture>
       <div className="z-20">
-        <h2 className="text-sm uppercase pb-2 tracking-[15px] text-[#ff0000] font ">
+        <h2 className="text-sm uppercase pb-2 tracking-[15px] text-strong-red font ">
          {pageInfo?.role}
         </h2>
         <h1 className="text-4xl lg:text-5xl font-semibold px-10 ">
           <span className="mr-3 font-montserrat leading-[75px]">{text}</span>
-          <Cursor cursorColor="#ff0000" />
+          <Cursor cursorColor="strong-red" />
         </h1>
         <div className="pt-5">
           <ButtonNav name="About" destiny="#about" classNameText="heroButton" />
