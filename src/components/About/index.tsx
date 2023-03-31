@@ -7,13 +7,10 @@ type Props = {
   pageInfo: PageInfo;
 };
 
-
 const About = ({ pageInfo }: Props) => {
   return (
     <div
-
-    className="sectionMain border h-auto grid md:grid-flow-col md:gap-10 gap-8 items-center max-mobileUL:px-4 relative text-center   md:text-left
-       mx-auto "
+      className="sectionMain border h-auto grid md:grid-flow-col md:gap-10 gap-8 items-center max-mobileUL:px-4 relative text-center md:text-left mx-auto"
     >
       <picture>
         <motion.img
@@ -41,19 +38,19 @@ const About = ({ pageInfo }: Props) => {
           alt={pageInfo?.name}
         />
       </picture>
-      <div
-        className="px-0 md:px-4"
-      >
+      <div className="px-0 md:px-4">
         <h3
           className="md:text-left font-extrabold leading-5 text-indigo-600
         uppercase text-sm tracking-[5px] mb-[10px] hover:text-strong-red"
         >
           About
         </h3>
-        <h4 className="text-4xl px-5 font-semibold hover:text-strong-red">{pageInfo?.name}</h4>
+        <h4 className="text-4xl px-5 font-semibold hover:text-strong-red">
+          {pageInfo?.name}
+        </h4>
         <p
           className="max-md:text-sm text-base p-5
-          max-mobileL:h-60
+          max-mobileL:h-auto
           mb-5 "
         >
           {pageInfo?.backgroundInformation}
