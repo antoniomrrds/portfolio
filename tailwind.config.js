@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
@@ -9,7 +10,7 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'strong-red':'#ff0000',
+      'strong-red': '#ff0000',
       ...colors,
     },
     screens: {
@@ -21,9 +22,12 @@ module.exports = {
       ...defaultTheme.screens,
     },
     fontFamily: {
-      montserrat:['Montserrat, sans-serif']
+      montserrat: ['Montserrat, sans-serif'],
     },
+    clipPath: {
+      triangle: " polygon(50% 0%, 0% 100%, 100% 100%)",
+  },
     extend: {},
   },
-  plugins: [require('tailwind-scrollbar')],
+  plugins: [require('tailwind-scrollbar'), require('tailwind-clip-path')],
 };

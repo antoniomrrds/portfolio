@@ -24,10 +24,10 @@ const Hero = ({ pageInfo }: Props) => {
       <BackgroundCicles />
       <picture>
         <img
-          className="relative rounded-full h-32 w-32 mx-auto object-cover"
+          className="relative rounded-full h-32 w-32 mx-auto object-cover clip-path-triangle"
           src={urlFor(pageInfo?.heroImage).url()}
           alt={pageInfo?.name}
-        />
+      />
       </picture>
       <div className="z-20">
         <h2 className="text-sm uppercase pb-2 tracking-[15px] text-strong-red font ">

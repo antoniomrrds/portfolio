@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer components {
   .heroButton {
-    @apply px-6 py-2 border-[#242424] rounded-full uppercase text-xs tracking-widest  text-gray-500 transition-all m-1 hover:border  hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40;
+    @apply px-6  py-2 border-[#242424] rounded-full uppercase text-xs tracking-widest  text-gray-500 transition-all m-1 hover:border  hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40;
   }
   .sectionMain{
     @apply h-[100dvh] w-full  p-5 sm:p-10 top-[66px] box-border
   }
-
   .contactInput{
     @apply outline-none bg-slate-400/10 rounded-sm border border-[#242424] py-4 px-6
     text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40

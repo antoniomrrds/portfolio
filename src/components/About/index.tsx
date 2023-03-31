@@ -12,7 +12,7 @@ const About = ({ pageInfo }: Props) => {
   return (
     <div
 
-    className="sectionMain  grid md:grid-flow-col md:gap-10 gap-8 items-center max-mobileUL:px-4 relative text-center   md:text-left
+    className="sectionMain border h-auto grid md:grid-flow-col md:gap-10 gap-8 items-center max-mobileUL:px-4 relative text-center   md:text-left
        mx-auto "
     >
       <picture>
@@ -36,7 +36,6 @@ const About = ({ pageInfo }: Props) => {
           hover:shadow-xl hover:shadow-strong-red
           shadow-lg shadow-indigo-500/50
           mx-auto
-
           "
           src={urlFor(pageInfo?.profilePic).url()}
           alt={pageInfo?.name}
@@ -46,9 +45,7 @@ const About = ({ pageInfo }: Props) => {
         className="px-0 md:px-4"
       >
         <h3
-          className="
-          text-red-
-          md:text-left font-extrabold leading-5 text-indigo-600
+          className="md:text-left font-extrabold leading-5 text-indigo-600
         uppercase text-sm tracking-[5px] mb-[10px] hover:text-strong-red"
         >
           About
