@@ -15,6 +15,7 @@ import { fetchExperiences } from '@/utils/fetchExperiences';
 import { fetchSocials } from '@/utils/fetchSocials';
 import { fetchSkills } from '@/utils/fetchSkills';
 import { fetchProjects } from '@/utils/fetchProjects';
+import Tec from '@/components/tec';
 
 type Props = {
   pageInfo: PageInfo;
@@ -27,7 +28,7 @@ type Props = {
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   return (
     // bg-[rgb(36,36,36)]
-    <div className="bg-[rgb(36,36,36)] h-screen text-white snap-y snap-mandatory snap overflow-auto z-0 scrollbar  scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+    <div className="bg-[#121212] h-screen  text-white snap-y snap-mandatory snap overflow-auto z-0  scrollbar-thin scrollbar-track-black hover:scrollbar-thumb-strong-red scrollbar-thumb-blue ">
       <Head>
         <title>Marcos Portfolio</title>
       </Head>
@@ -62,8 +63,10 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <ContactMe />
       </section>
 
+      <Tec/>
+
       <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
+        <footer className="sticky bottom-5 w-full cursor-pointer animate-bounce">
           <div className="flex items-center justify-center">
             <picture>
               <img
@@ -98,3 +101,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     revalidate: 10,
   };
 };
+
+
+

@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import React from 'react';
 import { urlFor } from '@/config/sanity';
 import { motion } from 'framer-motion';
 import { PageInfo } from 'typings';
@@ -10,7 +11,8 @@ type Props = {
 const About = ({ pageInfo }: Props) => {
   return (
     <div
-      className="sectionMain border h-auto grid md:grid-flow-col md:gap-10 gap-8 items-center max-mobileUL:px-4 relative text-center md:text-left mx-auto"
+      className="sectionMain max-mobileUS:h-auto
+      max-w-[2000px] p-5 md:grid md:grid-flow-col md:gap-10  items-center max-mobileUL:px-4 relative text-center md:text-left mx-auto"
     >
       <picture>
         <motion.img
@@ -33,6 +35,7 @@ const About = ({ pageInfo }: Props) => {
           hover:shadow-xl hover:shadow-strong-red
           shadow-lg shadow-indigo-500/50
           mx-auto
+          mb-5
           "
           src={urlFor(pageInfo?.profilePic).url()}
           alt={pageInfo?.name}

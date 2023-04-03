@@ -2,6 +2,7 @@ import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Social } from '../../../typings.d';
+import ButtonNav from '../ButtonNav';
 
 type Props = {
   socials: Social[];
@@ -9,7 +10,7 @@ type Props = {
 
 const Header = ({ socials }: Props) => {
   return (
-    <header className="bg-[rgb(36,36,36)]  box-border  sticky top-0 p-2 flex items-start  justify-between max-w-7xl mx-auto z-20 xl:items-center ">
+    <header className="bg-black  border-b-2 hover:border-strong-red border-blue box-border w-full  sticky top-0 p-2 flex items-start  justify-between  mx-auto z-20 xl:items-center ">
       <motion.div
         initial={{
           x: -500,
@@ -54,6 +55,24 @@ const Header = ({ socials }: Props) => {
           }}
           className="flex flex-row items-center text-gray-300 cursor-pointer"
         >
+
+          <ButtonNav name="About" destiny="#about" classNameText="heroButton" />
+          <ButtonNav
+            name="Experience"
+            destiny="#experience"
+            classNameText="heroButton "
+          />
+          <ButtonNav
+            name="Skills"
+            destiny="#skills"
+            classNameText="heroButton"
+          />
+          <ButtonNav
+            name="Projects"
+            destiny="#projects"
+            classNameText="heroButton"
+          />
+
           <SocialIcon
             className="cursor-pointer"
             fgColor="gray"

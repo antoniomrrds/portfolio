@@ -7,16 +7,20 @@ type props = {
 
 const WorkExperience = ({ experiences }: props) => {
   return (
-    <div className="sectionMain w-full flex-col h-auto flex items-center justify-center relative max-w-[2000px]   ">
-      max-mobileM:ml-4
+    <div className="sectionMain  border-t-4 bg-white shadow-xl  transition-shadow hover:shadow-lg flex-col  flex items-center justify-center  relative ">
+
       <h3
         className=" text-center
         uppercase
-         text-gray-500  max-mobileM:text-xl  text-2xl tracking-[20px]"
+        text-black
+        font-bold
+        hover:text-strong-red
+        max-mobileM:text-xl  text-2xl tracking-[5px]
+        "
       >
         Experience
       </h3>
-      <div className="w-fit  grid box-border border p-5 items-center mx-auto md:grid-cols-3 md:gap-4 ">
+      <div className="w-full  grid grid-cols-1 gap-3 mx-auto  p-5 items-start justify-items-center md:grid-cols-3 md:gap-4 ">
         {experiences?.map((experience) => (
           <ExperienceCard key={experience?._id} experience={experience} />
         ))}
@@ -26,3 +30,4 @@ const WorkExperience = ({ experiences }: props) => {
 };
 
 export default WorkExperience;
+

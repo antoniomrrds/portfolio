@@ -1,45 +1,265 @@
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/pagination";
+
+// import required modules
+import { Grid, Pagination } from "swiper"
+
 const Tec = () => {
   return (
-    <section id="technologies" className="p-5 sm:p-10">
-      <div className="w-20 sm:w-40 h-1 bg-gradient-to-r from-rose-500 to-violet-500 rounded-full" />
-      <h1 className="text-gradient py-10">Technologien</h1>
-      <p className="text-lg font-light w-72">
-        Ich habe mit einer Vielzahl von Technologien im Bereich der
-        Webentwicklung gearbeitet.
-      </p>
-      <div className="flex overflow-x-scroll py-5 w-full scrollbar-hide space-x-5">
-        <div className="flex flex-col justify-between h-60 sm:h-72 w-80 sm:w-96 flex-shrink-0 shadow  dark:shadow-gray-500 bg-violet-100 dark:bg-slate-800 py-2 px-3 rounded-xl">
-          <div>
-            <h3
-              className={`text-red-500 text-lg sm:text-xl font-bold pb-2`}
-            ></h3>
-            <p className="text-xs sm:text-sm font-light"></p>
-          </div>
-          <div>
-            {' '}
-            <p className="self-start pt-3 pb-1 font-semibold">
-              Meine Erfahrung mit <span className={`text-red-500`}></span>
-            </p>
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center">
-                <div className="flex items-center space-x-1">
-                  {/* <Image */}
-                  {/* src={urlFor(stack.mainImage).url()}
-                      alt={stack.title}
-                      width={20}
-                      height={20}
-                    /> */}
-                 <span className="text-xs font-gray-500 font-light">
-                    asdas
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+    <>
+ <Swiper
+    slidesPerView={3}
+    grid={{
+      rows: 2,
+      fill: "row",
+    }}
+    spaceBetween={10}
+    pagination={{
+      clickable: true,
+    }}
+    modules={[Grid, Pagination]}
+
+  className="mySwiper "
+    >
+      <SwiperSlide>Slide 1</SwiperSlide>
+      <SwiperSlide>Slide 2</SwiperSlide>
+      <SwiperSlide>Slide 3</SwiperSlide>
+      <SwiperSlide>Slide 4</SwiperSlide>
+      <SwiperSlide>Slide 5</SwiperSlide>
+      <SwiperSlide>Slide 6</SwiperSlide>
+      <SwiperSlide>Slide 7</SwiperSlide>
+      <SwiperSlide>Slide 8</SwiperSlide>
+      <SwiperSlide>Slide 9</SwiperSlide>
+    </Swiper>
+  </>
+
+
+
+    );
 };
 
 export default Tec;
+{/* <section id="technologies" className="p-5 sm:p-10">
+<div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
+  <div className="mx-auto max-w-lg text-center">
+    <h2 className="text-3xl font-bold sm:text-4xl">
+      Kickstart your marketing
+    </h2>
+
+    <p className="mt-4 text-gray-300">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae aperiam
+      fugit consequuntur saepe laborum.
+    </p>
+  </div>
+
+  <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <a
+      className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
+      href="/services/digital-campaigns"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-10 w-10 text-pink-500"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+        />
+      </svg>
+
+      <h2 className="mt-4 text-xl font-bold text-white">
+        Digital campaigns
+      </h2>
+
+      <p className="mt-1 text-sm text-gray-300">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo
+        possimus adipisci distinctio alias voluptatum blanditiis
+        laudantium.
+      </p>
+    </a>
+
+    <a
+      className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
+      href="/services/digital-campaigns"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-10 w-10 text-pink-500"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+        />
+      </svg>
+
+      <h2 className="mt-4 text-xl font-bold text-white">
+        Digital campaigns
+      </h2>
+
+      <p className="mt-1 text-sm text-gray-300">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo
+        possimus adipisci distinctio alias voluptatum blanditiis
+        laudantium.
+      </p>
+    </a>
+
+    <a
+      className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
+      href="/services/digital-campaigns"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-10 w-10 text-pink-500"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+        />
+      </svg>
+
+      <h2 className="mt-4 text-xl font-bold text-white">
+        Digital campaigns
+      </h2>
+
+      <p className="mt-1 text-sm text-gray-300">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo
+        possimus adipisci distinctio alias voluptatum blanditiis
+        laudantium.
+      </p>
+    </a>
+
+    <a
+      className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
+      href="/services/digital-campaigns"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-10 w-10 text-pink-500"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+        />
+      </svg>
+
+      <h2 className="mt-4 text-xl font-bold text-white">
+        Digital campaigns
+      </h2>
+
+      <p className="mt-1 text-sm text-gray-300">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo
+        possimus adipisci distinctio alias voluptatum blanditiis
+        laudantium.
+      </p>
+    </a>
+
+    <a
+      className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
+      href="/services/digital-campaigns"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-10 w-10 text-pink-500"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+        />
+      </svg>
+
+      <h2 className="mt-4 text-xl font-bold text-white">
+        Digital campaigns
+      </h2>
+
+      <p className="mt-1 text-sm text-gray-300">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo
+        possimus adipisci distinctio alias voluptatum blanditiis
+        laudantium.
+      </p>
+    </a>
+
+    <a
+      className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
+      href="/services/digital-campaigns"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-10 w-10 text-pink-500"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+        />
+      </svg>
+
+      <h2 className="mt-4 text-xl font-bold text-white">
+        Digital campaigns
+      </h2>
+
+      <p className="mt-1 text-sm text-gray-300">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo
+        possimus adipisci distinctio alias voluptatum blanditiis
+        laudantium.
+      </p>
+    </a>
+  </div>
+
+  <div className="mt-12 text-center">
+    <a
+      href="#"
+      className="inline-block rounded bg-pink-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-pink-700 focus:outline-none focus:ring focus:ring-yellow-400"
+    >
+      Get Started Today
+    </a>
+  </div>
+</div>
+</section> */}
