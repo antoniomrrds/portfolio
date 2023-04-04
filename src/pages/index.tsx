@@ -64,7 +64,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
       </section>
 
       <Tec/>
-
+{/* 
       <Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer animate-bounce">
           <div className="flex items-center justify-center">
@@ -77,7 +77,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
             </picture>
           </div>
         </footer>
-      </Link>
+      </Link> */}
     </div>
   );
 };
