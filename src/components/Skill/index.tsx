@@ -1,53 +1,54 @@
 import React from 'react';
 import { urlFor } from '@/config/sanity';
 import { Skill as SkillType } from 'typings';
+
+import ProgressBar from '@ramonak/react-progress-bar';
+
 type Props = {
   skill: SkillType;
 };
 
 const Skill = ({ skill }: Props) => {
   return (
+    <article className="w-full group rounded-xl border border-gray-700 bg-[#1a1d24]   p-4 hover:border-strong-red ">
+      <picture>
+        <img
+          alt= {skill?.title}
+          src={urlFor(skill?.image).url()}
+          className="h-16 w-16 rounded-full object-cover"
+        />
+      </picture>
+      <div className="flex items-center gap-4">
+          <h3 className="text-lg font-bold w-48 py-2 group-hover:text-strong-red font-montserrat  md:text-orange truncate ... max-w-max 
+          leading-6 ">
+            {skill?.title}
+          </h3>
+      </div>
+      <div className="h-full rounded-lg border border-gray-700 p-3 group">
+        <h4 className="font-medium text-white pb-1 group-hover:text-blue text-ellipsis overflow-hidden ...">
+          Progress{' '}
+        </h4>
 
-      <article className="w-full rounded-xl border border-gray-700  bg-gray-800   border border-gray-700 max-md:pb-1 md:p-4 hover:border-pink-600">
-          <picture>
-            <img
-              alt="Developer"
-              src={urlFor(skill?.image).url()}
-              className="h-16 w-16 md:rounded-full object-cover max-md:w-full max-h-16"
+        <span className="mt-1 text-xs font-medium text-gray-300">
+          <ProgressBar
+            animateOnRender={true}
+            initCompletedOnAnimation={100}
+            completed={skill?.progress}
+            maxCompleted={100}
+            bgColor="rgb(51, 133, 255)"
+            borderRadius="100px"
+            transitionTimingFunction='ease-in-out'
+          
             />
-          </picture>
-        <div className="flex items-center gap-4">
-
-          <div>
-            <h3 className="text-lg font-medium w-[100px] max-md:hidden text-white truncate ... max-w-max">
-              {skill?.title}
-            </h3>
-          </div>
-        </div>
-
-        <ul className="mt-4 space-y-2 ">
-          <li>
-            <a
-              href="#"
-              className="block h-full rounded-lg border border-gray-700 p-4 hover:border-pink-600"
-            >
-              <strong className="font-medium text-white text-ellipsis overflow-hidden ...">
-                Progress{' '}
-              </strong>
-
-              <p className="mt-1 text-xs font-medium text-gray-300">
-                {skill?.progress}%
-              </p>
-            </a>
-          </li>
-        </ul>
-      </article>
-
+        </span>
+      </div>
+    </article>
   );
 };
 {
   /* <div classNameName="group relative flex cursor-pointer">
 <picture>
+rgb(51, 133, 255)
   <img
     classNameName="rounded-full border border-gray-500 object-cover  w-24 h-24 md:w-24 md:h-24 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"
     src={urlFor(skill?.image).url()}

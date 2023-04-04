@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.0.16",
     "@next/font": "13.1.2",
     "@portabletext/react": "^2.0.2",
+    "@ramonak/react-progress-bar": "^5.0.3",
     "@sanity/image-url": "^1.0.2",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",

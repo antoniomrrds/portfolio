@@ -7,7 +7,7 @@ type props = {
 
 const WorkExperience = ({ experiences }: props) => {
   return (
-    <div className="sectionMain  border-t-4 bg-white shadow-xl  transition-shadow hover:shadow-lg flex-col  flex items-center justify-center  relative ">
+    <div className="sectionMain  border-t-4 bg-white shadow-xl  transition-shadow hover:shadow-lg flex-col  flex items-center justify-center  relative  max-md:h-auto ">
 
       <h3
         className=" text-center

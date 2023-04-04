@@ -57,6 +57,7 @@ const Skills = ({ skills }: props) => {
             fill: 'row',
           },
         },
+
         1280: {
           slidesPerView: 4,
           grid: {
@@ -64,32 +65,30 @@ const Skills = ({ skills }: props) => {
             fill: 'row',
           },
         },
-        2000: {
-      
+
+        1500: {
           slidesPerView: 5,
           grid: {
             rows: 3,
             fill: 'row',
           },
         },
-      
       },
     };
     setCustomSwiperOptions(options);
   }, []);
   return (
-    <div className="sectionMain  relative flex justify-center flex-col items-center border  w-auto  ">
-      <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl">
+    <div
+      className="sectionMain
+      relative flex justify-evenly !top-10 flex-col items-center w-full  "
+      >
+      <h3 className="absolute uppercase tracking-[20px] top-12 text-orange text-2xl">
         Skills
       </h3>
-
-      <div
-        className="  w-full flex-col flex justify-center items-center p-4
-    "
-      >
+      <div className='flex absolute top-24 justify-center md:shrink-1 min-w-0 mx-auto flex-col items-center px-5  h-auto  max-w-screen-2xl   w-full  box-border'>
         {customSwiperOptions && (
           <Swiper
-            spaceBetween={10}
+            spaceBetween={5}
             centeredSlides={false}
             autoplay={{
               delay: 2500,
@@ -103,12 +102,11 @@ const Skills = ({ skills }: props) => {
             breakpoints={customSwiperOptions.breakpoints}
             navigation={true}
             modules={[Grid, EffectCube, Pagination, Autoplay, Navigation]}
-            className="mySwiper  mx-auto max-w-screen-mobileS   w-auto mobileUL:max-w-screen-mobileUS md:max-w-screen-mobileUL 
-            xl:max-w-screen-lg  2xl:max-w-screen-2xl "
+            className="mySwiper  mx-auto w-full h-full "
           >
             {skills?.map((skill) => (
-              <SwiperSlide  key={skill._id}>
-                <Skill  skill={skill} />
+              <SwiperSlide key={skill._id}>
+                <Skill skill={skill} />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -145,3 +143,6 @@ modules={[EffectCube, Pagination, Autoplay, Navigation]}
 className=" mx-auto  w-[800px] mySwiper"
 > */
 }
+
+// max-w-screen-mobileS   w-auto mobileUL:max-w-screen-mobileUS md:max-w-screen-mobileUL
+//             xl:max-w-screen-lg  2xl:max-w-screen-2xl

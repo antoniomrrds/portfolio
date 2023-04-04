@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         'strong-red': '#ff0000',
         'blue':'#114df1',
+        'orange':'#e96900',
         transparent: 'transparent',
         current: 'currentColor',
       },
