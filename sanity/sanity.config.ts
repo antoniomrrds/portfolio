@@ -2,13 +2,14 @@ import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
+import {dataset,projectId} from './environment'
+
 
 export default defineConfig({
   name: 'default',
   title: 'project-portfolio',
-
-  projectId: process.env.SANITY_PROJECT_ID,
-  dataset: process.env.SANITY_DATASET,
+  dataset ,
+  projectId,
 
   plugins: [deskTool(), visionTool()],
 

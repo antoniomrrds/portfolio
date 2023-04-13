@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'project',
-  title: 'Project',
+  title: 'Projects',
   type: 'document',
   fields: [
     defineField({
@@ -42,6 +42,11 @@ export default defineType({
     defineField({
       name: 'linkToBuild',
       title: 'LinkToBuild',
+      type: 'url',
+    }),
+    defineField({
+      name: 'linkToGitHub',
+      title: 'LinkToGitHub',
       type: 'url',
     }),
   ],

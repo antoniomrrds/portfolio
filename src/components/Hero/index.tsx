@@ -14,7 +14,7 @@ const Hero = ({ pageInfo }: Props) => {
       `Hi, The Name's ${pageInfo?.name}`,
       'Coffee.tsx',
       'Code',
-      `Repeat!`
+      `Repeat!`,
     ],
     loop: true,
     delaySpeed: 2000,
@@ -24,14 +24,16 @@ const Hero = ({ pageInfo }: Props) => {
       <BackgroundCicles />
       <picture>
         <img
-          className="relative rounded-full h-32 w-32 mx-auto object-cover clip-path-triangle"
+          className="  rounded-full h-32 w-32 mx-auto object-cover clip-path-triangle"
           src={urlFor(pageInfo?.heroImage).url()}
           alt={pageInfo?.name}
-      />
+        />
       </picture>
-      <div className="z-20">
+
+
+      <div className="z-10">
         <h2 className="text-sm uppercase pb-2 tracking-[15px] text-strong-red font ">
-         {pageInfo?.role}
+          {pageInfo?.role}
         </h2>
         <h1 className="text-4xl lg:text-5xl font-semibold px-10 ">
           <span className="mr-3 font-montserrat leading-[75px]">{text}</span>

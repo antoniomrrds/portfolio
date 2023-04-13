@@ -4,7 +4,7 @@ import { groq } from 'next-sanity';
 import { Project } from 'typings';
 
 const query = groq`
-  *[_type == "projects"] {
+  *[_type == "project"] {
     ...,
     technologies[]->
   }

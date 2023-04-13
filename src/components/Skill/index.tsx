@@ -9,8 +9,9 @@ type Props = {
 };
 
 const Skill = ({ skill }: Props) => {
+  // border-gray-700 bg-[#1a1d24] 
   return (
-    <article className="w-full group rounded-xl border border-gray-700 bg-[#1a1d24]   p-4 hover:border-strong-red ">
+    <article className="w-full group rounded-xl border bg-gray-900 shadow-lg   p-4 hover:border-strong-red ">
       <picture>
         <img
           alt= {skill?.title}

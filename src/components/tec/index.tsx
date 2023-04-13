@@ -1,55 +1,13 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import React from "react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/grid";
-import "swiper/css/pagination";
-
-// import required modules
-import { Grid, Pagination } from "swiper"
 
 const Tec = () => {
   return (
-    <>
- <Swiper
-    slidesPerView={3}
-    grid={{
-      rows: 2,
-      fill: "row",
-    }}
-    spaceBetween={10}
-    pagination={{
-      clickable: true,
-    }}
-    modules={[Grid, Pagination]}
-
-  className="mySwiper "
-    >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <SwiperSlide>Slide 5</SwiperSlide>
-      <SwiperSlide>Slide 6</SwiperSlide>
-      <SwiperSlide>Slide 7</SwiperSlide>
-      <SwiperSlide>Slide 8</SwiperSlide>
-      <SwiperSlide>Slide 9</SwiperSlide>
-    </Swiper>
-  </>
-
-
-
-    );
-};
-
-export default Tec;
-{/* <section id="technologies" className="p-5 sm:p-10">
+    <section id="technologies" className="p-5 sm:p-10">
 <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
   <div className="mx-auto max-w-lg text-center">
     <h2 className="text-3xl font-bold sm:text-4xl">
-      Kickstart your marketing
+    Projects
     </h2>
 
     <p className="mt-4 text-gray-300">
@@ -61,7 +19,7 @@ export default Tec;
 
   <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
     <a
-      className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
+      className="block rounded-xl border hover:border-pink-500/10 hover:shadow-pink-500/10"
       href="/services/digital-campaigns"
     >
       <svg
@@ -262,4 +220,10 @@ export default Tec;
     </a>
   </div>
 </div>
-</section> */}
+</section>
+
+    );
+};
+
+export default Tec;
+

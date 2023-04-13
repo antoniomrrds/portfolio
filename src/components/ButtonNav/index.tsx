@@ -5,12 +5,13 @@ type Props = {
   name: string;
   classNameText: string;
   destiny: string;
+  clicked:()=>void;
 };
 
-const ButtonNav = ({ name, classNameText, destiny }: Props) => {
+const ButtonNav = ({ name, classNameText, destiny,clicked }: Props) => {
   return (
     <Link href={destiny}>
-      <button className={classNameText}>{name}</button>
+      <button onClick={clicked} className={classNameText}>{name}</button>
     </Link>
   );
 };

@@ -7,13 +7,14 @@ module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/containers/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       colors: {
         'strong-red': '#ff0000',
-        'blue':'#114df1',
-        'orange':'#e96900',
+        blue: '#114df1',
+        orange: '#e96900',
         transparent: 'transparent',
         current: 'currentColor',
       },
@@ -23,6 +24,7 @@ module.exports = {
         mobileM: '375px',
         mobileL: '414px',
         mobileUL: '568px',
+
         ...defaultTheme.screens,
       },
       fontFamily: {
@@ -31,7 +33,14 @@ module.exports = {
       clipPath: {
         triangle: ' polygon(50% 0%, 0% 100%, 100% 100%)',
       },
+      backgroundImage: {
+        'hero': "url('/img/night-city.gif')",
+      },
     },
   },
-  plugins: [require('tailwind-scrollbar'), require('tailwind-clip-path')],
+  plugins: [
+    require('tailwind-scrollbar'),
+    require('tailwind-clip-path'),
+    require('autoprefixer'),
+  ],
 };
