@@ -1,7 +1,7 @@
 import { urlFor } from '@/config/sanity';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { PageInfo } from 'typings';
-import BackgroundCicles from '../BackgroundCicles';
+
 
 type Props = {
   pageInfo: PageInfo;
@@ -21,7 +21,6 @@ const Hero = ({ pageInfo }: Props) => {
   });
   return (
     <div className="sectionMain flex flex-col space-y-8 items-center justify-center max-w-[2000px] text-center overflow-hidden">
-      <BackgroundCicles />
       <picture>
         <img
           className="  rounded-full h-32 w-32 mx-auto object-cover clip-path-triangle"

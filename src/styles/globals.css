@@ -14,12 +14,12 @@
 
 
 @layer components {
-  .heroButton {
+  .linksMenu {
     @apply hover:shadow hover:drop-shadow-2xl font-montserrat     uppercase text-base
-    max-md:bg-white
+    max-md:bg-white border-0 hover:border-collapse
     max-md:hover:text-blue
-    text-strong-red transition-all  hover:border-strong-red hover:text-white  duration-500  hover:border-solid z-auto
-      md:my-0 p-2  w-full;
+    text-strong-red transition-all  hover:border-strong-red md:text-white  duration-500  hover:border-solid z-auto
+      md:my-0 p-2  max-md:w-full
   }
 
 .card-project {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Skill as SkillType } from 'typings';
 
 // Import Swipe
-import { Pagination, Autoplay, Navigation, Grid, SwiperOptions } from 'swiper';
+import { Pagination, Autoplay, Grid, SwiperOptions } from 'swiper';
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.min.css';
@@ -92,10 +92,9 @@ const Carousel = ({ slides }: Props) => {
             clickable: true,
           }}
           breakpoints={customSwiperOptions.breakpoints}
-          navigation
           keyboard
           grabCursor={true}
-          modules={[Grid, Pagination, Autoplay, Navigation]}
+          modules={[Grid, Pagination, Autoplay]}
           className="  w-full h-full overflow-hidden"
         >
           {slides?.map((skill) => (

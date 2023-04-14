@@ -30,7 +30,7 @@ const HomePage = ({
 }: Props) => {
   //  bg-hero
   return (
-    <div className=" bg-no-repeat  bg-[#121212]   bg-cover bg-center bg-fixed  sectionMain  text-white snap-y snap-mandatory snap overflow-auto   scrollbar-thin scrollbar-track-black hover:scrollbar-thumb-strong-red scrollbar-thumb-blue z-0 ">
+    <div className=" bg-no-repeat  bg-[#121212]   bg-cover bg-center bg-fixed  sectionMain  text-white snap-y snap-mandatory snap overflow-auto   scrollbar-thin scrollbar-track-black hover:scrollbar-thumb-strong-red scrollbar-thumb-blue  ">
       <Head>
         <title>Marcos Portfolio</title>
       </Head>
