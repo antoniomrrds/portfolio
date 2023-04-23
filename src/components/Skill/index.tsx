@@ -9,7 +9,6 @@ type Props = {
 };
 
 const Skill = ({ skill }: Props) => {
-  // border-gray-700 bg-[#1a1d24] 
   return (
     <article className="w-full group rounded-xl border bg-gray-900 shadow-lg   p-4 hover:border-strong-red ">
       <picture>
@@ -20,7 +19,7 @@ const Skill = ({ skill }: Props) => {
         />
       </picture>
       <div className="flex items-center gap-4">
-          <h3 className="text-lg font-bold w-48 py-2 group-hover:text-strong-red font-montserrat  md:text-orange truncate ... max-w-max 
+          <h3 className="text-lg font-bold w-48 py-2 group-hover:text-strong-red font-montserrat  md:text-orange truncate ... max-w-max
           leading-6 ">
             {skill?.title}
           </h3>
@@ -39,7 +38,7 @@ const Skill = ({ skill }: Props) => {
             bgColor="rgb(51, 133, 255)"
             borderRadius="100px"
             transitionTimingFunction='ease-in-out'
-          
+
             />
         </span>
       </div>

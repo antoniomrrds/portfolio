@@ -1,8 +1,9 @@
+import React from 'react';
 import { urlFor } from '@/config/sanity';
 
 import { Project } from 'typings';
 import CarouselProjects from '../CarouselProjects';
-import { SocialIcon } from 'react-social-icons';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 
 type props = {
@@ -22,7 +23,7 @@ const Projects = ({ projects }: props) => {
       justify-items-center
      gap-6 p-4
        grid-flow-row  md:grid-cols-2
-      lg:grid-cols-3
+      lg:grid-cols-3  
        auto-cols-max
       grid    place-content-center
       cursor-pointer rounded-lg overflow-hidden "
@@ -30,7 +31,7 @@ const Projects = ({ projects }: props) => {
         {projects.map((project, i) => (
           <div
             key={i}
-            className="h-[380px] w-[350px] lg:w-[314px]
+            className="h-[420px] w-[350px] lg:w-[314px]
             flex-shrink-1 flex items-center justify-center
             overflow-hidden  min-h-[1px]
            group flex-col bg-gray-900 shadow-lg
@@ -60,34 +61,31 @@ const Projects = ({ projects }: props) => {
               <div>
                 <CarouselProjects slides={project?.technologies} />
               </div>
-              <div className="flex flex-row justify-center items-center  absolute bottom-0 left-0 right-0     ">
+              <div className="flex border flex-row justify-center items-center  absolute bottom-0 left-0 right-0     ">
                 {project?.linkToBuild && (
-                  <>
-                    <SocialIcon
+                  <Link
+                    href={project?.linkToBuild}
+                    target="_blank"
+                    className="m-1 flex flex-row items-center justify-center  card-project-links"
+                  >
+                    <FaExternalLinkAlt
                       key={project._id}
-                      url={project?.linkToBuild}
-                      target="_blank"
-                      fgColor="gray"
-                      bgColor="transparent"
-                      className="group"
+                      size={30}
                     />
 
-                    <span className="group-open:">Build</span>
-                  </>
+                    <span className="p-2 ">Build</span>
+                  </Link>
                 )}
                 {project?.linkToGitHub && (
-                  <>
-                    <SocialIcon
-                      key={project._id}
-                      href={project?.linkToGitHub}
-                      network="github"
-                      fgColor="gray"
-                      bgColor="transparent"
-                      target="_blank"
-                      rel="noreferrer"
-                    />
-                    <span>Source Code</span>
-                  </>
+                  <Link
+                    key={project._id}
+                    href={project?.linkToGitHub}
+                    target="_blank"
+                    className=" flex flex-row items-center justify-center card-project-links "
+                  >
+                    <FaGithub  size={30} />
+                    <span className="p-2  ">Source Code</span>
+                  </Link>
                 )}
               </div>
             </div>

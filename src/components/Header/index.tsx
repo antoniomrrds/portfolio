@@ -1,6 +1,5 @@
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { Social } from '../../../typings.d';
 
 import { IoClose, IoMenu } from 'react-icons/io5';
@@ -19,6 +18,16 @@ const Header = ({ socials }: Props) => {
     { name: 'Projects', destiny: '#projects', classNameText: 'linksMenu' },
     { name: 'Contact', destiny: '#contact', classNameText: 'linksMenu' },
   ];
+
+   const handleOpenMenu =() =>{
+     const width = window.innerWidth;
+     if(width <=768)
+       return setOpen(!open);
+     return;
+   }
+
+
+
   return (
     <header
       className="  shadow-md w-full
@@ -29,12 +38,12 @@ const Header = ({ socials }: Props) => {
       <div className="md:flex md:items-center  md:justify-between  bg-black py-4 md:px-10 px-7">
         <motion.div
           initial={{
-            x: -500,
+            y: -500,
             opacity: 0,
             scale: 0.5,
           }}
           animate={{
-            x: 0,
+            y: 0,
             opacity: 1,
             scale: 1,
           }}
@@ -53,7 +62,7 @@ const Header = ({ socials }: Props) => {
             />
           ))}
           <div
-            onClick={() => setOpen(!open)}
+            onClick={() => handleOpenMenu() }
             className="text-3xl cursor-pointer md:hidden flex ml-auto 	"
           >
             {open ? (
@@ -95,7 +104,7 @@ const Header = ({ socials }: Props) => {
               name={links.name}
               destiny={links.destiny}
               classNameText={links.classNameText}
-              clicked={() => setOpen(!open)}
+              clicked={() => handleOpenMenu()}
             />
           ))}
         </motion.nav>

@@ -16,7 +16,7 @@ type Props = {
 
 const CarouselProjects = ({ slides }: Props) => {
   return (
-    <div className="flex absolute overflow-hidden  justify-center min-w-0 mx-auto  items-center   h-auto     w-full  box-border">
+    <div className="flex absolute overflow-hidden justify-center min-w-0 mx-auto  items-center   h-auto     w-full  box-border">
       <Swiper
         slidesPerView={1}
         loop={true}
@@ -39,7 +39,7 @@ const CarouselProjects = ({ slides }: Props) => {
       >
         {slides?.map((skill, index) => (
           <SwiperSlide key={skill._id}>
-            <div key={index} className="flex items-center p-2 border-gray-700 bg-[#1a1d24]  rounded-xl">
+            <div key={index} className="flex items-center p-2 border bg-[#1a1d24]  rounded-xl">
               <div className="flex items-center overflow-hidden w-full ">
                 <picture>
                   <img

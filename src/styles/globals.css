@@ -13,17 +13,22 @@
 
 
 
+
 @layer components {
   .linksMenu {
     @apply hover:shadow hover:drop-shadow-2xl font-montserrat     uppercase text-base
     max-md:bg-white border-0 hover:border-collapse
     max-md:hover:text-blue
-    text-strong-red transition-all  hover:border-strong-red md:text-white  duration-500  hover:border-solid z-auto
+    text-strong-red transition-all  hover:border-strong-red md:text-blue  duration-500  hover:border-solid z-auto
       md:my-0 p-2  max-md:w-full
   }
 
 .card-project {
     @apply shadow-[rgba(50,50,93,0.25)_0px_50px_100px_-20px,rgba(0,0,0,0.3)_0px_30px_60px_-30px,rgba(10,37,64,0.35)_0px_-2px_6px_0px_inset];
+}
+
+.card-project-links {
+  @apply text-[gray]  border-solid border-2 hover:text-orange hover:border-2 hover:border-solid hover:border-orange rounded-xl p-2
 }
 
   .sectionMain {
