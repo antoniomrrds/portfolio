@@ -1,17 +1,19 @@
 import React from 'react';
 
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link';
 
-import Header from '@/components/Header';
+import Header from '@/components/Menu/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-import WorkExperience from '@/components/WorkExperience';
-import Skills from '@/components/Skills';
-import Projects from '@/components/Projects';
-import ContactMe from '@/components/ContactMe';
+// import WorkExperience from '@/components/WorkExperience';
+import SkillsList from '@/components/SkillsList/Skills';
+import Projects from '@/components/Projects/Project';
+import ContactMe from '@/components/Contact/ContactMe';
 
 import { Experience, PageInfo, Project, Skill, Social } from 'typings';
+import Footer from '@/components/Footer';
+
 
 type Props = {
   pageInfo: PageInfo;
@@ -23,49 +25,34 @@ type Props = {
 
 const HomePage = ({
   pageInfo,
-  experiences,
+  // experiences,
   skills,
   projects,
   socials,
 }: Props) => {
   //  bg-hero
   return (
-    <div className=" bg-no-repeat  bg-[#121212]   bg-cover bg-center bg-fixed  sectionMain  text-white snap-y snap-mandatory snap overflow-auto   scrollbar-thin scrollbar-track-black hover:scrollbar-thumb-strong-red scrollbar-thumb-blue  ">
+    <div className=" bg-no-repeat  bg-[#121212]  bg-cover bg-center bg-fixed  sectionMain  text-white snap-y snap-mandatory snap overflow-auto   scrollbar-thin scrollbar-track-black hover:scrollbar-thumb-strong-red scrollbar-thumb-blue  ">
       <Head>
         <title>Marcos Portfolio</title>
       </Head>
       <Header socials={socials} />
 
-      {/* Hero */}
-      <section id="hero">
-        <Hero pageInfo={pageInfo} />
-      </section>
+      <Hero pageInfo={pageInfo} />
 
-      {/* About */}
-      <section id="about">
-        <About pageInfo={pageInfo} />
-      </section>
+      <About pageInfo={pageInfo} />
 
-      {/* experience */}
-      <section id="experience">
-        <WorkExperience experiences={experiences} />
-      </section>
+      {/* <WorkExperience experiences={experiences} /> */}
 
-      {/* Skills */}
-      <section id="skills">
-        <Skills skills={skills} />
-      </section>
-      {/* Project */}
-      <section id="projects">
-        <Projects projects={projects} />
-      </section>
-      {/* Contact Me */}
-      {/* <section id="contact" >
-  <ContactMe />
-</section> */}
+      <SkillsList skills={skills} />
 
-      {/*
-<Link href="#hero">
+      <Projects projects={projects} />
+
+      <ContactMe />
+
+      <Footer />
+
+      {/* <Link href="#hero">
   <footer className="sticky bottom-5 w-full cursor-pointer animate-bounce">
     <div className="flex items-center justify-center">
       <picture>

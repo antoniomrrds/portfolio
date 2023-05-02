@@ -1,6 +1,6 @@
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
-import { Social } from '../../../typings.d';
+import { Social } from '../../../../typings';
 
 import { IoClose, IoMenu } from 'react-icons/io5';
 import { useState } from 'react';
@@ -13,20 +13,17 @@ const Header = ({ socials }: Props) => {
   const [open, setOpen] = useState(false);
   const linksMenu = [
     { name: 'About', destiny: '#about', classNameText: 'linksMenu' },
-    { name: 'Experience', destiny: '#experience', classNameText: 'linksMenu' },
+    // { name: 'Experience', destiny: '#experience', classNameText: 'linksMenu' },
     { name: 'Skills', destiny: '#skills', classNameText: 'linksMenu' },
     { name: 'Projects', destiny: '#projects', classNameText: 'linksMenu' },
     { name: 'Contact', destiny: '#contact', classNameText: 'linksMenu' },
   ];
 
-   const handleOpenMenu =() =>{
-     const width = window.innerWidth;
-     if(width <=768)
-       return setOpen(!open);
-     return;
-   }
-
-
+  const handleOpenMenu = () => {
+    const width = window.innerWidth;
+    if (width <= 768) return setOpen(!open);
+    return;
+  };
 
   return (
     <header
@@ -62,7 +59,7 @@ const Header = ({ socials }: Props) => {
             />
           ))}
           <div
-            onClick={() => handleOpenMenu() }
+            onClick={() => handleOpenMenu()}
             className="text-3xl cursor-pointer md:hidden flex ml-auto 	"
           >
             {open ? (
@@ -72,7 +69,6 @@ const Header = ({ socials }: Props) => {
             )}
           </div>
         </motion.div>
-
 
         <motion.nav
           initial={{

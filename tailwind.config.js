@@ -31,10 +31,12 @@ module.exports = {
         montserrat: ['Montserrat, sans-serif'],
       },
       clipPath: {
-        triangle: ' polygon(50% 0%, 0% 100%, 100% 100%)',
+        triangle:'polygon(50% 0%, 0% 100%, 100% 100%)',
+        cardProject:'polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px)'
       },
       backgroundImage: {
         'hero': "url('/img/night-city.gif')",
+        'contact': "url('/img/contact.gif')",
       },
     },
   },

@@ -35,11 +35,11 @@ const CarouselProjects = ({ slides }: Props) => {
         }}
         keyboard
         modules={[Autoplay, EffectCube]}
-        className="  w-1/2 h-full overflow-hidden"
+        className=" max-mobileM:w-3/4 w-1/2 h-full overflow-hidden"
       >
         {slides?.map((skill, index) => (
           <SwiperSlide key={skill._id}>
-            <div key={index} className="flex items-center p-2 border bg-[#1a1d24]  rounded-xl">
+            <div key={index} className="flex items-center  p-2 border bg-[#1a1d24]  rounded-xl overflow-hidden">
               <div className="flex items-center overflow-hidden w-full ">
                 <picture>
                   <img
@@ -49,7 +49,7 @@ const CarouselProjects = ({ slides }: Props) => {
                   />
                 </picture>
                 <span
-                  className="text-xs font-gray-500 overflow-hidden font-light "
+                  className="text-xs font-gray-500  font-light text-ellipsis overflow-hidden  "
                 >
                   {skill.title}
                 </span>
