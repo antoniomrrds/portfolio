@@ -15,6 +15,7 @@ module.exports = {
         'strong-red': '#ff0000',
         blue: '#114df1',
         orange: '#e96900',
+        'midnight-blue':'#000014',
         transparent: 'transparent',
         current: 'currentColor',
       },
@@ -31,11 +32,13 @@ module.exports = {
         montserrat: ['Montserrat, sans-serif'],
       },
       clipPath: {
-        triangle:'polygon(50% 0%, 0% 100%, 100% 100%)',
+        shield: "polygon(51.05% 99.99%,24.34% 65.54%,6.18% 25.91%,49.37% 20.01%,92.77% 24.10%,76.29% 64.45%)",
+        cardSkill: "polygon(26% 0, 31% 5%, 61% 5%, 66% 0, 92% 0, 100% 8%, 100% 89%, 91% 100%, 7% 100%, 0 92%, 0 0)",
         cardProject:'polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px)'
       },
       backgroundImage: {
-        'hero': "url('/img/night-city.gif')",
+        'hero': "url('/img/section-hero.jpg')",
+        'texture': "url('/img/bg-texture.png')",
         'contact': "url('/img/contact.gif')",
       },
     },

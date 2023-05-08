@@ -9,8 +9,8 @@ type props = {
 const Skills = ({ skills }: props) => {
   return (
     <section id="skills">
-      <div className="sectionMain  border-4 top-[66px] border-red-500 relative flex justify-evenly  flex-col items-center w-full">
-        <h3 className="absolute uppercase  tracking-[20px] top-12 text-orange text-2xl">
+      <div className="sectionMain maxContainer mx-auto border-4 top-[66px] border-red-500 relative flex justify-evenly  flex-col items-center w-full">
+        <h3 className="absolute uppercase max-mobileUS:tracking-[10px] tracking-[20px] top-12 text-orange text-2xl">
           Skills
         </h3>
         <Carousel slides={skills} />

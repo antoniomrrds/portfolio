@@ -27,12 +27,9 @@ const Header = ({ socials }: Props) => {
 
   return (
     <header
-      className="  shadow-md w-full
-    sticky top-0
-    border-b-2  z-20 hover:border-strong-red border-blue
-    "
+      className="  shadow-md w-full sticky top-0 border-b-2  z-20 hover:border-strong-red border-blue"
     >
-      <div className="md:flex md:items-center  md:justify-between  bg-black py-4 md:px-10 px-7">
+      <div className="md:flex md:items-center  md:justify-between  bg-midnight-blue py-4 md:px-10 px-7">
         <motion.div
           initial={{
             y: -500,
@@ -49,7 +46,7 @@ const Header = ({ socials }: Props) => {
           }}
           className="flex flex-row item-center justify-start "
         >
-          {socials.map((social) => (
+           {socials.map((social) => (
             <SocialIcon
               key={social._id}
               url={social.url}
@@ -60,7 +57,7 @@ const Header = ({ socials }: Props) => {
           ))}
           <div
             onClick={() => handleOpenMenu()}
-            className="text-3xl cursor-pointer md:hidden flex ml-auto 	"
+            className="text-3xl cursor-pointer md:hidden flex ml-auto items-center 	"
           >
             {open ? (
               <IoClose color="gray" size={50} />
@@ -87,13 +84,14 @@ const Header = ({ socials }: Props) => {
           className={`flex md:items-center md:flex-row flex-col
         max-md:bg-white
           md:z-auto md:static absolute left-0   max-md:w-full  md:opacity-100  z-[-1]
-          max-md:border-b-2 shadow
+          max-md:border-b-2  max-md:shadow
         max-md:border-strong-red
            transition-all ease-in-out duration-500 ${
              open ? 'top-[82px]  opacity-100' : 'top-[-500px] '
            } md:opacity-100 opacity-0
           `}
         >
+
           {linksMenu.map((links) => (
             <ButtonNav
               key={links.name}

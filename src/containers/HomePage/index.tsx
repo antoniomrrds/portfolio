@@ -14,7 +14,6 @@ import ContactMe from '@/components/Contact/ContactMe';
 import { Experience, PageInfo, Project, Skill, Social } from 'typings';
 import Footer from '@/components/Footer';
 
-
 type Props = {
   pageInfo: PageInfo;
   experiences: Experience[];
@@ -32,7 +31,7 @@ const HomePage = ({
 }: Props) => {
   //  bg-hero
   return (
-    <div className=" bg-no-repeat  bg-[#121212]  bg-cover bg-center bg-fixed  sectionMain  text-white snap-y snap-mandatory snap overflow-auto   scrollbar-thin scrollbar-track-black hover:scrollbar-thumb-strong-red scrollbar-thumb-blue  ">
+    <div className="bg-repeat bg-center bg-fixed  bg-texture   bg-[#121212]   sectionMain   text-white snap-y snap-mandatory snap overflow-auto   scrollbar-thin scrollbar-track-black hover:scrollbar-thumb-strong-red scrollbar-thumb-blue  ">
       <Head>
         <title>Marcos Portfolio</title>
       </Head>
@@ -50,7 +49,7 @@ const HomePage = ({
 
       <ContactMe />
 
-      <Footer />
+      <Footer socials={socials} pageInfo={pageInfo}/>
 
       {/* <Link href="#hero">
   <footer className="sticky bottom-5 w-full cursor-pointer animate-bounce">

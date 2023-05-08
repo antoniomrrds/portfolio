@@ -13,7 +13,7 @@ const About = ({ pageInfo }: Props) => {
     <section id="about">
       <div
         className="sectionMain border-lime-500 border max-mobileM:h-auto
-      max-w-[2000px] p-5 md:grid md:grid-flow-col md:gap-10  items-center max-mobileUL:px-4 relative text-center md:text-left mx-auto"
+        maxContainer p-5 md:grid md:grid-flow-col md:gap-10  items-center max-mobileUL:px-4 relative text-center md:text-left mx-auto"
       >
         <picture>
           <motion.img
@@ -36,6 +36,7 @@ const About = ({ pageInfo }: Props) => {
           hover:shadow-xl hover:shadow-strong-red
           shadow-lg shadow-indigo-500/50
           mx-auto
+          max-md:mt-[80px]
           mb-5
           "
             src={urlFor(pageInfo?.profilePic).url()}

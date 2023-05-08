@@ -58,7 +58,7 @@ const CardProject = ({ project, index }: Props) => {
               className=" flex flex-row items-center justify-center card-project-links "
             >
               <FaGithub size={30} />
-              <span className="p-2 max-mobileM:hidden   ">Source Code</span>
+              <span className="p-2 max-mobileM:hidden">Code</span>
             </Link>
           )}
         </div>
