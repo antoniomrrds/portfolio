@@ -19,7 +19,7 @@ const Skill = ({ skill }: Props) => {
         />
       </picture>
       <div className="flex items-center gap-4">
-          <h3 className="text-lg font-bold w-48 py-2 group-hover:text-strong-red font-montserrat  md:text-orange truncate ... max-w-max
+          <h3 className="text-lg font-medium text-orange w-48 py-2  group-hover:text-strong-red font-brunoAceSc   truncate ... max-w-max
           leading-6 ">
             {skill?.title}
           </h3>

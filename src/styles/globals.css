@@ -11,18 +11,19 @@
   }
 }
 
+
 @layer components {
   .sectionMain {
     @apply h-[100dvh];
   }
-  .maxContainer{
+  .maxContainer {
     @apply max-w-[2000px];
   }
 
   .linksMenu {
-    @apply hover:shadow hover:drop-shadow-2xl font-montserrat     uppercase text-base
+    @apply hover:shadow hover:drop-shadow-2xl      uppercase text-base
     max-md:bg-white border-0 hover:border-collapse my-5
-    max-md:hover:text-blue max-md:text-black
+    max-md:hover:text-blue max-md:text-black font-brunoAceSc md:hover:text-strong-red
     text-strong-red transition-all  hover:border-strong-red md:text-white  duration-500  hover:border-solid z-auto
       md:my-0 p-2  max-md:w-full;
   }
@@ -32,11 +33,11 @@
   }
 
   .card-project-links {
-    @apply text-[gray]  border-solid border-2 hover:text-orange hover:border-2 hover:border-solid hover:border-orange rounded-xl p-2 m-2;
+    @apply text-[gray]  border-solid border-2 hover:text-teal hover:border-2 hover:border-solid hover:border-teal rounded-xl p-2 m-2;
   }
 
   .contact-content {
-    @apply flex items-center space-x-1 justify-center
+    @apply flex items-center space-x-1 justify-center;
   }
 
   .contact-icon {
@@ -44,15 +45,14 @@
   }
 
   .contact-data {
-    @apply sm:text-xs md:text-xl lg:text-2xl  max-mobileUL:text-xs;
+    @apply sm:text-xs md:text-xs   xl:text-2xl  max-mobileUL:text-xs font-brunoAceSc;
   }
   .contact-input {
     @apply outline-none bg-slate-400/10 rounded-sm border border-[#242424] py-2 px-4
     text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40
-    focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40 w-full
+    focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40 w-full;
   }
-  .background-hero{
-    @apply bg-no-repeat    bg-cover bg-center bg-fixed bg-hero
-    }
-
+  .background-hero {
+    @apply bg-no-repeat    bg-cover bg-center bg-fixed bg-hero;
+  }
 }

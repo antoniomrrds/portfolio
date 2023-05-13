@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       colors: {
         'strong-red': '#ff0000',
+        teal: '#1BFD9C',
         blue: '#114df1',
         orange: '#e96900',
         'midnight-blue':'#000014',
@@ -30,7 +31,9 @@ module.exports = {
       },
       fontFamily: {
         montserrat: ['Montserrat, sans-serif'],
-      },
+        brunoAceSc: ['Bruno Ace SC, cursive'],
+        amaticSc: ['Amatic SC, cursive'],
+    },
       clipPath: {
         shield: "polygon(51.05% 99.99%,24.34% 65.54%,6.18% 25.91%,49.37% 20.01%,92.77% 24.10%,76.29% 64.45%)",
         cardSkill: "polygon(26% 0, 31% 5%, 61% 5%, 66% 0, 92% 0, 100% 8%, 100% 89%, 91% 100%, 7% 100%, 0 92%, 0 0)",

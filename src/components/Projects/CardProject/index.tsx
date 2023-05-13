@@ -25,14 +25,14 @@ const CardProject = ({ project, index }: Props) => {
     >
       <picture>
         <img
-          className=" relative h-52  cursor-pointer w-screen  z-0  object-fill object-center border-b-2"
+          className=" relative h-52  cursor-pointer w-screen  z-0  object-fill object-center border-b-2 border-strong-red"
           src={urlFor(project?.image).url()}
           alt={project?.title}
         />
       </picture>
 
       <div className="h-full w-full    ">
-        <h4 className=" text-center px-4 hover:text-[#1BFD9C]  leading-[60px] font-bold outline-0  outline-none  whitespace-nowrap  text-ellipsis overflow-hidden">
+        <h4 className=" text-center px-4 hover:text-teal text-transparent  text-shadow text-white font-brunoAceSc leading-[60px] font-bold outline-0  outline-none  whitespace-nowrap  text-ellipsis overflow-hidden">
           {`${index + 1} - ${project?.title}`}
         </h4>
         <div>

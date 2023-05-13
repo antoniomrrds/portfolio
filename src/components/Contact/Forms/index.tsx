@@ -12,7 +12,7 @@ const Form = () => {
   const { register, handleSubmit } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto: antoniomarcos.amrrds@gmail.com?subject=${formData.subject}&body=Hi, My name is ${formData.name}. ${formData.message} (${formData.email})`;
+    window.location.href = `mailto: antoniomarcos.amrrds@gmail.com?subject=${formData.subject}&body=Olá, Meu Nome e ${formData.name}. ${formData.message} (${formData.email})`;
   };
 
   return (
@@ -50,7 +50,7 @@ const Form = () => {
 
       <button
         type="submit"
-        className="bg-orange py-2 rounded-full text-black font-bold text-lg w-full"
+        className="bg-orange py-2 rounded-full text-black font-bold text-lg w-full font-brunoAceSc"
       >
         Submit
       </button>

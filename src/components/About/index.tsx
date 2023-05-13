@@ -10,10 +10,10 @@ type Props = {
 
 const About = ({ pageInfo }: Props) => {
   return (
-    <section id="about">
+    <section id="about" >
       <div
-        className="sectionMain border-lime-500 border max-mobileM:h-auto
-        maxContainer p-5 md:grid md:grid-flow-col md:gap-10  items-center max-mobileUL:px-4 relative text-center md:text-left mx-auto"
+        className="sectionMain max-sm:h-auto
+        maxContainer p-5 md:grid md:grid-flow-col md:gap-10 items-center max-mobileUL:px-4  text-center md:text-left mx-auto"
       >
         <picture>
           <motion.img
@@ -33,8 +33,8 @@ const About = ({ pageInfo }: Props) => {
           object-cover
           max-mobileL:w-40 max-mobileL:h-40
           w-56 h-56
-          hover:shadow-xl hover:shadow-strong-red
-          shadow-lg shadow-indigo-500/50
+          border-midnight-blue border-2
+          shadow-lg
           mx-auto
           max-md:mt-[80px]
           mb-5
@@ -43,20 +43,17 @@ const About = ({ pageInfo }: Props) => {
             alt={pageInfo?.name}
           />
         </picture>
-        <div className="px-0 md:px-4">
+        <div className="p-4 bg-midnight-blue clip-path-cardProject shadow-md shadow-black/5 dark:shadow-black/30">
           <h3
-            className="md:text-left font-extrabold leading-5 text-blue
-        uppercase text-sm tracking-[5px] mb-[10px] hover:text-strong-red"
+            className="md:text-left font-brunoAceSc px-5 font-extrabold leading-5 text-blue uppercase text-sm tracking-[5px] mb-[10px] hover:text-strong-red"
           >
             About
           </h3>
-          <h4 className="text-4xl px-5 font-semibold hover:text-strong-red">
+          <h4 className="text-4xl px-5 font-semibold font-brunoAceSc hover:text-strong-red">
             {pageInfo?.name}
           </h4>
           <p
-            className="max-md:text-sm text-base p-5
-          max-mobileL:h-auto
-          mb-5 "
+            className="max-md:text-sm text-base p-5 max-mobileL:h-auto mb-5"
           >
             {pageInfo?.backgroundInformation}
           </p>

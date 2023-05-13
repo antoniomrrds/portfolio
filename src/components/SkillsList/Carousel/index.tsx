@@ -72,7 +72,7 @@ const Carousel = ({ slides }: Props) => {
   }, []);
 
   return (
-    <div className="flex  overflow-hidden  top-24 justify-center min-w-0 mx-auto  items-center px-5  h-auto  max-w-screen-2xl   w-full  box-border">
+    <div className="flex  overflow-hidden  absolute top-24 justify-center min-w-0 mx-auto  items-center px-5  h-auto  max-w-screen-2xl   w-full  box-border">
       {customSwiperOptions && (
         <Swiper
           spaceBetween={5}
