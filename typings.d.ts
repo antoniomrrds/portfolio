@@ -79,7 +79,7 @@ export interface Pdf extends SanityBody{
   url:string;
   title: string;
   fileName: string;
-  pdfFile: PdfFile;
+  pdfFile?: PdfFile;
   size:string | number;
 
 }

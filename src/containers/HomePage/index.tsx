@@ -1,37 +1,31 @@
-import React, { createContext } from 'react';
+import React from 'react';
 
 import Head from 'next/head';
-// import Link from 'next/link';
 
 import Header from '@/components/Menu/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-// import WorkExperience from '@/components/WorkExperience';
+
 import SkillsList from '@/components/SkillsList/Skills';
 import Projects from '@/components/Projects/Project';
 import ContactMe from '@/components/Contact/ContactMe';
 
-import { Experience, PageInfo, Pdf, Project, Skill, Social } from 'typings';
+import { Experience, PageInfo, Project, Skill, Social } from 'typings';
 import Footer from '@/components/Footer';
 
 type Props = {
   pageInfo: PageInfo;
-  pdf: Pdf;
   experiences: Experience[];
   skills: Skill[];
   projects: Project[];
   socials: Social[];
 };
 
-export const LinkContext = createContext<Partial<Pdf>>({});
-
 const HomePage = ({
   pageInfo,
-  // experiences,
   skills,
   projects,
   socials,
-  pdf,
 }: Props) => {
 
   return (
@@ -41,13 +35,9 @@ const HomePage = ({
       </Head>
       <Header socials={socials} />
 
-      <LinkContext.Provider value={pdf}>
-        <Hero pageInfo={pageInfo}  />
-      </LinkContext.Provider>
+      <Hero pageInfo={pageInfo}  />
 
       <About pageInfo={pageInfo} />
-
-      {/* <WorkExperience experiences={experiences} /> */}
 
       <SkillsList skills={skills} />
 
