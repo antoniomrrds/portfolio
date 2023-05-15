@@ -4,7 +4,6 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 import {dataset,projectId} from './environment'
 
-
 export default defineConfig({
   name: 'default',
   title: 'project-portfolio',

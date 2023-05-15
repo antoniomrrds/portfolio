@@ -2,14 +2,16 @@ import { GetStaticProps } from 'next';
 import React from 'react';
 
 //typings
-import { Experience, PageInfo, Project, Skill, Social } from 'typings';
+import { Experience, PageInfo, Pdf, Project, Skill, Social } from 'typings';
 
-//fetchs
-import { fetchPageInfo } from '@/utils/fetchPageInfo';
-import { fetchExperiences } from '@/utils/fetchExperiences';
-import { fetchSocials } from '@/utils/fetchSocials';
-import { fetchSkills } from '@/utils/fetchSkills';
-import { fetchProjects } from '@/utils/fetchProjects';
+//fetches
+import { fetchPageInfo } from '@/utils/fetches/fetchPageInfo';
+import { fetchExperiences } from '@/utils/fetches/fetchExperiences';
+import { fetchSkills } from '@/utils/fetches/fetchSkills';
+import { fetchProjects } from '@/utils/fetches/fetchProjects';
+import { fetchSocials } from '@/utils/fetches/fetchSocials';
+import { fetchPdf } from '@/utils/fetches/fetchPdf';
+
 
 //pages
 import HomePage from '@/containers/HomePage';
@@ -17,13 +19,14 @@ import HomePage from '@/containers/HomePage';
 
 type Props = {
   pageInfo: PageInfo;
+  pdf:Pdf;
   experiences: Experience[];
   skills: Skill[];
   projects: Project[];
   socials: Social[];
 };
 
-const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
+const Home = ({ pageInfo, experiences, skills, projects, socials,pdf }: Props) => {
   return (
     <div>
 
@@ -33,6 +36,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         skills={skills}
         projects={projects}
         socials={socials}
+        pdf={pdf}
       />
     </div>
   );
@@ -46,6 +50,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
   const socials: Social[] = await fetchSocials();
+  const pdf : Pdf = await fetchPdf();
   return {
     props: {
       pageInfo,
@@ -53,6 +58,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       skills,
       projects,
       socials,
+      pdf
     },
     revalidate: 10,
   };

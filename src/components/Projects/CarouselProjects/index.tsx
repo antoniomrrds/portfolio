@@ -45,7 +45,7 @@ const CarouselProjects = ({ slides }: Props) => {
                   <img
                     src={urlFor(skill?.image).url()}
                     alt={skill.title}
-                    className="h-12 w-12 rounded object-cover mr-1 "
+                    className="h-12 w-12 rounded object-cover max-mobileS:mr-5 mr-1 "
                   />
                 </picture>
                 <span

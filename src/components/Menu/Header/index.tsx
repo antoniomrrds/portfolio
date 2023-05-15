@@ -12,7 +12,7 @@ type Props = {
 const Header = ({ socials }: Props) => {
   const [open, setOpen] = useState(false);
   const linksMenu = [
-    { name: 'Home', destiny: '#hero', classNameText: 'linksMenu' },
+    { name: 'Home', destiny: '/', classNameText: 'linksMenu' },
     { name: 'About', destiny: '#about', classNameText: 'linksMenu' },
     { name: 'Skills', destiny: '#skills', classNameText: 'linksMenu' },
     { name: 'Projects', destiny: '#projects', classNameText: 'linksMenu' },
@@ -27,7 +27,7 @@ const Header = ({ socials }: Props) => {
 
   return (
     <header
-      className="  shadow-md w-full sticky top-0 border-b-2  z-20 hover:border-strong-red border-blue"
+      className="shadow-md w-full sticky top-0 border-b-2  z-20 hover:border-strong-red border-blue"
     >
       <div className="md:flex md:items-center  md:justify-between  bg-midnight-blue py-4 md:px-10 px-7">
         <motion.div

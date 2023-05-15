@@ -18,7 +18,7 @@ const Form = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col w-full min-w-0 max-w-md mx-auto p-5 space-y-4 bg-white rounded-lg shadow-md"
+      className="flex flex-col w-full min-w-0 max-w-md mx-auto p-5 space-y-4 bg-black rounded-lg shadow-md"
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <input
@@ -50,7 +50,7 @@ const Form = () => {
 
       <button
         type="submit"
-        className="bg-orange py-2 rounded-full text-black font-bold text-lg w-full font-brunoAceSc"
+        className="bg-[#1abc9c] py-2 rounded-full text-black font-bold text-lg w-full font-brunoAceSc"
       >
         Submit
       </button>

@@ -5,6 +5,7 @@ import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 import { Project } from 'typings';
 
+
 type Props = {
   project: Project;
   index: number;
@@ -13,7 +14,7 @@ type Props = {
 const CardProject = ({ project, index }: Props) => {
   return (
     <div
-      className="w-full  h-[420px] max-w-[320px]  max-md:w-[300px] flex items-center justify-center
+      className="w-full  h-[420px] max-w-[320px]  max-md:w-[275px] flex items-center justify-center
       overflow-hidden  min-h-[1px] m-[5px]
       group flex-col bg-[#212121] shadow-lg
       text-[17.5px] font-normal font-montserrat
@@ -25,14 +26,14 @@ const CardProject = ({ project, index }: Props) => {
     >
       <picture>
         <img
-          className=" relative h-52  cursor-pointer w-screen  z-0  object-fill object-center border-b-2 border-strong-red"
+          className=" relative h-52  cursor-pointer w-screen  z-0   object-fill object-center border-b-2 border-strong-red"
           src={urlFor(project?.image).url()}
           alt={project?.title}
         />
       </picture>
 
-      <div className="h-full w-full    ">
-        <h4 className=" text-center px-4 hover:text-teal text-transparent  text-shadow text-white font-brunoAceSc leading-[60px] font-bold outline-0  outline-none  whitespace-nowrap  text-ellipsis overflow-hidden">
+      <div className="h-full w-full">
+        <h4 className=" text-center px-4 hover:text-teal text-transparent max-mobileM:text-sm max-mobileM:py-5 text-shadow text-white font-brunoAceSc leading-[60px] font-bold outline-0  outline-none  whitespace-nowrap  text-ellipsis overflow-hidden">
           {`${index + 1} - ${project?.title}`}
         </h4>
         <div>

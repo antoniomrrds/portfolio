@@ -5,6 +5,14 @@ interface SanityBody {
   _updatedAt: string;
 }
 
+interface PdfFile {
+  _type: 'pdf';
+  asset: {
+    _ref: string;
+    _type: 'reference';
+  };
+}
+
 interface Image {
   _type: 'image';
   asset: {
@@ -64,4 +72,14 @@ export interface Social extends SanityBody {
   _type: 'social';
   title: string;
   url: string;
+}
+
+export interface Pdf extends SanityBody{
+  _type: 'pdf';
+  url:string;
+  title: string;
+  fileName: string;
+  pdfFile: PdfFile;
+  size:string | number;
+
 }

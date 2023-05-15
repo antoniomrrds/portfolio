@@ -49,7 +49,7 @@ const About = ({ pageInfo }: Props) => {
           >
             About
           </h3>
-          <h4 className="text-4xl px-5 font-semibold font-brunoAceSc hover:text-strong-red">
+          <h4 className="text-4xl px-5 font-semibold max-mobileS:text-xl font-brunoAceSc hover:text-strong-red">
             {pageInfo?.name}
           </h4>
           <p

@@ -27,11 +27,11 @@ const ContactMe = () => {
               <p className="contact-data">+55 (031) 98265-4558</p>
             </div>
             <div className="contact-content">
-              <MapPinIcon className="contact-icon" />
+              <EnvelopeIcon className="contact-icon" />
               <p className="contact-data">antoniomarcos.amrrds@gmail.com</p>
             </div>
             <div className="contact-content">
-              <EnvelopeIcon className="contact-icon" />
+              <MapPinIcon className="contact-icon" />
               <p className="contact-data">Belo horizonte</p>
             </div>
 

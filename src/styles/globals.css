@@ -41,7 +41,7 @@
   }
 
   .contact-icon {
-    @apply md:h-7 md:w-7 h-5 w-5   max-mobileUL:h-4 max-mobileUL:w-4 animate-pulse text-orange;
+    @apply md:h-7 md:w-7 h-5 w-5   max-mobileUL:h-4 max-mobileUL:w-4 animate-pulse text-[#1abc9c];
   }
 
   .contact-data {
@@ -49,10 +49,12 @@
   }
   .contact-input {
     @apply outline-none bg-slate-400/10 rounded-sm border border-[#242424] py-2 px-4
-    text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40
-    focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40 w-full;
+    text-teal placeholder-gray-500 transition-all focus:border-[#1abc9c]
+    focus:text-teal hover:border-teal w-full;
   }
   .background-hero {
     @apply bg-no-repeat    bg-cover bg-center bg-fixed bg-hero;
   }
 }
+
+

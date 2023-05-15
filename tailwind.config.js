@@ -31,8 +31,8 @@ module.exports = {
       },
       fontFamily: {
         montserrat: ['Montserrat, sans-serif'],
-        brunoAceSc: ['Bruno Ace SC, cursive'],
-        amaticSc: ['Amatic SC, cursive'],
+        brunoAceSc: ['Bruno Ace SC'],
+        amaticSc: ['Amatic SC'],
     },
       clipPath: {
         shield: "polygon(51.05% 99.99%,24.34% 65.54%,6.18% 25.91%,49.37% 20.01%,92.77% 24.10%,76.29% 64.45%)",
