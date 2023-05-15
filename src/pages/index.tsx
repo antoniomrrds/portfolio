@@ -16,7 +16,6 @@ import { fetchPdf } from '@/utils/fetches/fetchPdf';
 //pages
 import HomePage from '@/containers/HomePage';
 
-
 type Props = {
   pageInfo: PageInfo;
   pdf:Pdf;

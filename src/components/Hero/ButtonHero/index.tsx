@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { LinkContext } from '@/containers/HomePage';
+import { saveAs } from 'file-saver';
 
 const BtnHero = () => {
   const pdfFile = useContext(LinkContext);
-
   const [loading, setLoading] = useState(false);
   const handleDownload = async () => {
     try {
@@ -12,14 +12,8 @@ const BtnHero = () => {
         return;
       }
       const response = await fetch(pdfFile?.url);
-      const buffer = await response.arrayBuffer();
-
-      const url = window.URL.createObjectURL(new Blob([buffer]));
-      const link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', `${pdfFile?.fileName}.pdf`);
-      document.body.appendChild(link);
-      link.click();
+      const blob = await response.blob();
+      saveAs(blob, `${pdfFile?.fileName}.pdf`);
       setLoading(false);
     } catch (error) {
       setLoading(false);

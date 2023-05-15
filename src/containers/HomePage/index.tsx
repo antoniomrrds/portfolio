@@ -1,6 +1,8 @@
 import React, { createContext } from 'react';
 
 import Head from 'next/head';
+// import Link from 'next/link';
+
 import Header from '@/components/Menu/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';

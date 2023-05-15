@@ -28,17 +28,8 @@ const About = ({ pageInfo }: Props) => {
             }}
             whileInView={{ opacity: 1, x: 0, rotateX: 0, y: -0 }}
             viewport={{ once: true }}
-            className="
-          rounded-full
-          object-cover
-          max-mobileL:w-40 max-mobileL:h-40
-          w-56 h-56
-          border-midnight-blue border-2
-          shadow-lg
-          mx-auto
-          max-md:mt-[80px]
-          mb-5
-          "
+            className=" rounded-full
+          object-cover max-mobileL:w-40 max-mobileL:h-40 w-56 h-56 border-midnight-blue border-2 shadow-lg mx-auto max-md:mt-[80px] mb-5"
             src={urlFor(pageInfo?.profilePic).url()}
             alt={pageInfo?.name}
           />
@@ -53,7 +44,7 @@ const About = ({ pageInfo }: Props) => {
             {pageInfo?.name}
           </h4>
           <p
-            className="max-md:text-sm text-base p-5 max-mobileL:h-auto mb-5"
+            className="max-md:text-xs text-sm p-5 max-mobileL:h-auto mb-5"
           >
             {pageInfo?.backgroundInformation}
           </p>

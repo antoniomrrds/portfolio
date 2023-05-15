@@ -7,7 +7,7 @@ type Props = {
 
 const Hero = ({ pageInfo }: Props) => {
   return (
-    <section id="hero">
+    <section id="home">
       <div className=" sectionMain flex flex-col justify-center items-center  maxContainer text-center overflow-hidden mx-auto  background-hero">
         <div className="z-10">
           <h1 className="max-md:text-2xl md:text-3xl lg:text-5xl font-semibold px-5 text-white font-brunoAceSc">

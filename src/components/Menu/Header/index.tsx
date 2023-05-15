@@ -12,7 +12,7 @@ type Props = {
 const Header = ({ socials }: Props) => {
   const [open, setOpen] = useState(false);
   const linksMenu = [
-    { name: 'Home', destiny: '/', classNameText: 'linksMenu' },
+    { name: 'Home', destiny: '#home', classNameText: 'linksMenu' },
     { name: 'About', destiny: '#about', classNameText: 'linksMenu' },
     { name: 'Skills', destiny: '#skills', classNameText: 'linksMenu' },
     { name: 'Projects', destiny: '#projects', classNameText: 'linksMenu' },
