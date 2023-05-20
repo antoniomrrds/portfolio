@@ -12,11 +12,11 @@ type Props = {
 const Header = ({ socials }: Props) => {
   const [open, setOpen] = useState(false);
   const linksMenu = [
-    { name: 'Home', destiny: '#home', classNameText: 'linksMenu' },
-    { name: 'About', destiny: '#about', classNameText: 'linksMenu' },
-    { name: 'Skills', destiny: '#skills', classNameText: 'linksMenu' },
-    { name: 'Projects', destiny: '#projects', classNameText: 'linksMenu' },
-    { name: 'Contact', destiny: '#contact', classNameText: 'linksMenu' },
+    { name: 'Home', destiny: '/#home', classNameText: 'linksMenu' },
+    { name: 'About', destiny: '/#about', classNameText: 'linksMenu' },
+    { name: 'Skills', destiny: '/#skills', classNameText: 'linksMenu' },
+    { name: 'Projects', destiny: '/#projects', classNameText: 'linksMenu' },
+    { name: 'Contact', destiny: '/contact', classNameText: 'linksMenu' },
   ];
 
   const handleOpenMenu = () => {
@@ -27,7 +27,7 @@ const Header = ({ socials }: Props) => {
 
   return (
     <header
-      className="shadow-md w-full sticky top-0 border-b-2  z-20 hover:border-strong-red border-blue"
+      className="w-full sticky top-0  z-20 "
     >
       <div className="md:flex md:items-center  md:justify-between  bg-midnight-blue py-4 md:px-10 px-7">
         <motion.div
@@ -81,15 +81,8 @@ const Header = ({ socials }: Props) => {
           transition={{
             duration: 1.5,
           }}
-          className={`flex md:items-center md:flex-row flex-col
-        max-md:bg-white
-          md:z-auto md:static absolute left-0   max-md:w-full  md:opacity-100  z-[-1]
-          max-md:border-b-2  max-md:shadow
-        max-md:border-strong-red
-           transition-all ease-in-out duration-500 ${
-             open ? 'top-[82px]  opacity-100' : 'top-[-500px] '
-           } md:opacity-100 opacity-0
-          `}
+          className={`flex md:items-center md:flex-row flex-col max-md:bg-white md:z-auto md:static absolute left-0   max-md:w-full  md:opacity-100  z-[-1]
+          max-md:shadow transition-all ease-in-out duration-500 ${open ? 'top-[82px]  opacity-100' : 'top-[-500px]'} md:opacity-100 opacity-0`}
         >
 
           {linksMenu.map((links) => (

@@ -50,7 +50,7 @@ const Form = () => {
 
       <button
         type="submit"
-        className="bg-[#1abc9c] py-2 rounded-full text-black font-bold text-lg w-full font-brunoAceSc"
+        className="bg-bluishGreen py-2 rounded-full text-black font-bold text-lg w-full font-brunoAceSc"
       >
         Submit
       </button>

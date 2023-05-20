@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -14,6 +13,7 @@ module.exports = {
       colors: {
         'strong-red': '#ff0000',
         teal: '#1BFD9C',
+        bluishGreen: '#1abc9c',
         blue: '#114df1',
         orange: '#e96900',
         'midnight-blue':'#000014',

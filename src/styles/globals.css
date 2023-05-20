@@ -22,9 +22,9 @@
 
   .linksMenu {
     @apply hover:shadow hover:drop-shadow-2xl      uppercase text-base
-    max-md:bg-white border-0 hover:border-collapse my-5
-    max-md:hover:text-blue max-md:text-black font-brunoAceSc md:hover:text-strong-red
-    text-strong-red transition-all  hover:border-strong-red md:text-white  duration-500  hover:border-solid z-auto
+    max-md:bg-white  my-5
+    max-md:hover:text-teal max-md:text-black font-brunoAceSc md:hover:text-teal
+     transition-all  md:text-white  duration-500  z-auto
       md:my-0 p-2  max-md:w-full;
   }
 

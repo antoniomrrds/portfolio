@@ -1,17 +1,11 @@
 import React from 'react';
-
-import Head from 'next/head';
-
-import Header from '@/components/Menu/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-
 import SkillsList from '@/components/SkillsList/Skills';
 import Projects from '@/components/Projects/Project';
-import ContactMe from '@/components/Contact/ContactMe';
+import Footer from '@/components/Footer';
 
 import { Experience, PageInfo, Project, Skill, Social } from 'typings';
-import Footer from '@/components/Footer';
 
 type Props = {
   pageInfo: PageInfo;
@@ -29,12 +23,7 @@ const HomePage = ({
 }: Props) => {
 
   return (
-    <div className="bg-repeat bg-center bg-fixed  bg-texture   bg-[#121212]   sectionMain   text-white snap-y snap-mandatory snap overflow-auto   scrollbar-thin scrollbar-track-black hover:scrollbar-thumb-strong-red scrollbar-thumb-blue  ">
-      <Head>
-        <title>Marcos Portfolio</title>
-      </Head>
-      <Header socials={socials} />
-
+    <div className="bg-repeat bg-center bg-fixed  bg-texture   bg-[#121212]   sectionMain   text-white snap-y snap-mandatory snap overflow-auto z-0  scrollbar-thin scrollbar-track-black hover:scrollbar-thumb-teal scrollbar-thumb-midnight-blue  ">
       <Hero pageInfo={pageInfo}  />
 
       <About pageInfo={pageInfo} />
@@ -43,9 +32,7 @@ const HomePage = ({
 
       <Projects projects={projects} />
 
-      <ContactMe />
-
-      <Footer socials={socials} pageInfo={pageInfo} />
+      <Footer socials={socials} classNameText={'top-[66px]'} pageInfo={pageInfo} />
     </div>
   );
 };

@@ -13,7 +13,9 @@ import { fetchSocials } from '@/utils/fetches/fetchSocials';
 
 //pages
 import HomePage from '@/containers/HomePage';
+import HeaderContainer from '@/components/HeaderContainer';
 
+//props
 type Props = {
   pageInfo: PageInfo;
   experiences: Experience[];
@@ -24,8 +26,7 @@ type Props = {
 
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   return (
-    <div>
-
+    <HeaderContainer socials={socials}>
       <HomePage
         pageInfo={pageInfo}
         experiences={experiences}
@@ -33,7 +34,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         projects={projects}
         socials={socials}
       />
-    </div>
+    </HeaderContainer>    
   );
 };
 
